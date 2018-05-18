@@ -3,13 +3,13 @@ import {
   View
 } from 'react-native';
 
-export default class HomeScreen extends React.Component {
+export default class AlertScreen extends React.Component {
   static navigationOptions = {
-    title: 'DASHBOARD',
+    title: 'ALERTS',
   };
 
   render() {
-    return (
+    return(
       <View>
 
       </View>

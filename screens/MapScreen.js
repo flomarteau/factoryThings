@@ -3,9 +3,9 @@ import {
   View
 } from 'react-native';
 
-export default class HomeScreen extends React.Component {
+export default class MapScreen extends React.Component {
   static navigationOptions = {
-    title: 'DASHBOARD',
+    title: 'MAP',
   };
 
   render() {
@@ -14,6 +14,5 @@ export default class HomeScreen extends React.Component {
 
       </View>
     );
-  };
-
+  }
 }
