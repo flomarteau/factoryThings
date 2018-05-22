@@ -19,7 +19,7 @@ export default class AlertScreen extends React.Component {
     return(
       <View>
         <Header   innerContainerStyles={{backgroundColor: 'black'}}
-                  outerContainerStyles={{backgroundColor: 'black', marginTop: 20, height: 50}}
+                  outerContainerStyles={{backgroundColor: 'black', marginTop: 20, height: 50, marginBottom: 10}}
                   centerComponent={{ text: 'ALERTS', style: { color: '#ff8c00', fontSize: 20 } }}
                 />
 
