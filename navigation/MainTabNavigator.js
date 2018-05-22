@@ -13,15 +13,13 @@ const HomeStack = createStackNavigator({
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Dashboard',
+  tabBarOptions: { showLabel: false, style: { backgroundColor: 'black' } },
+  tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
-        Platform.OS === 'ios'
-          ? `ios-home${focused ? '' : '-outline'}`
-          : 'md-home'
-      }
+        Platform.OS === 'ios' ? `ios-home${focused ? '' : '-outline'}` : 'md-home'}
     />
   ),
 };
@@ -31,6 +29,7 @@ const MapStack = createStackNavigator({
 });
 
 MapStack.navigationOptions = {
+  tabBarOptions: { showLabel: false, style: { backgroundColor: 'black' } },
   tabBarLabel: 'Map',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -45,6 +44,7 @@ const AlertStack = createStackNavigator({
 });
 
 AlertStack.navigationOptions = {
+  tabBarOptions: { showLabel: false, style: { backgroundColor: 'black' } },
   tabBarLabel: 'Alerts',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon

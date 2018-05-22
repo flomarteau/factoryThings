@@ -1,16 +1,30 @@
 import React from 'react';
 import {
-  View
+  View,
+  Text
 } from 'react-native';
+import Card from 'antd-mobile/lib/card';
 
 export default class AlertScreen extends React.Component {
   static navigationOptions = {
     title: 'ALERTS',
+    headerStyle: { backgroundColor: 'black' },
+    headerTintColor: '#ff8c00',
   };
 
   render() {
     return(
       <View>
+
+        <Card full style={{backgroundColor: '#333333'}}>
+          <Card.Header title={<Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>Colixbox n°XXX</Text>} extra={<Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>Caisson n°XXX</Text>}/>
+            <Card.Body>
+              <View style={{height: 50, borderBottomColor: 'white', borderBottomWidth: 1}}>
+              <Text style={{color: 'white', fontSize: 20, textAlign: 'center', marginTop: 10}}>Le caisson est ouvert</Text>
+              </View>
+            </Card.Body>
+          <Card.Footer content={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>10 rue du Pont, 75001 Paris</Text>} extra={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>Type : Copropriété</Text>}/>
+        </Card>
 
       </View>
     );
