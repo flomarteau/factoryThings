@@ -8,6 +8,7 @@ import { createStackNavigator } from 'react-navigation';
 
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
+import AlertScreen from './screens/AlertScreen';
 
 export default class App extends React.Component {
 
@@ -17,6 +18,7 @@ export default class App extends React.Component {
       {
         Home: HomeScreen,
         Map: MapScreen,
+        Alert: AlertScreen,
       },
       {
         initialRouteName: 'Home',
