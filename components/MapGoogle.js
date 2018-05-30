@@ -2,8 +2,7 @@ import React from 'react';
 import {
   StyleSheet,
   Text,
-  View,
-  Button
+  View
 } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
@@ -32,21 +31,6 @@ export default class MapGoogle extends React.Component {
           description={LeroyMerlin[i].detail}
           pinColor={LeroyMerlin[i].color}
         />
-
-        // <MapView.Marker
-        //   key={i}
-        //   coordinate={{
-        //     latitude: LeroyMerlin[i].lat,
-        //     longitude: LeroyMerlin[i].lng
-        //   }}
-        //   title={LeroyMerlin[i].numero}
-        //   description={LeroyMerlin[i].detail}
-        //   pinColor={LeroyMerlin[i].color}
-        // >
-        //   <MapView.Callout>
-        //     <Button title='Click Me!' onPress={() => console.log('Clicked')} />
-        //   </MapView.Callout>
-        // </MapView.Marker>
       );
     }
 

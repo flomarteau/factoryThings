@@ -25,7 +25,7 @@ export default class MapScreen extends React.Component {
     super();
     this.showMap = this.showMap.bind(this);
     this.state = {
-      mapView: "hidden",
+      mapView: "visible",
     }
     console.log(this.state);
   }
@@ -82,7 +82,6 @@ export default class MapScreen extends React.Component {
             rightComponent={ pictoList }
             // leftComponent={ backArrow }
           />
-
           <View style={{height: '100%'}}>
             <MapGoogle/>
           </View>
@@ -98,7 +97,6 @@ export default class MapScreen extends React.Component {
             rightComponent={ pictoMap }
             // leftComponent={ backArrow }
           />
-
           <ScrollView>
             <MapCards/>
           </ScrollView>
