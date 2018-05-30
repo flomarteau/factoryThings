@@ -8,6 +8,19 @@ import Button from 'antd-mobile/lib/button';
 
 export default class MapCards extends React.Component {
 
+  constructor(){
+    super();
+    this.showDetail = this.showDetail.bind(this);
+    this.state = {render:''}
+  }
+
+  showDetail(detail) {
+    console.log(this.state);
+    this.setState({
+      render: 'detail',
+    });
+  }
+
   render() {
     return(
       <View>
@@ -22,7 +35,16 @@ export default class MapCards extends React.Component {
               </View>
             </Card.Body>
           <Card.Footer content={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>10 rue du Pont, 75001 Paris</Text>} extra={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>Type : Copropriété</Text>}/>
-          <Card.Footer content={<Button type='primary' style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}>Accéder</Button>}/>
+          <Card.Footer content={
+            <Button
+              type='primary'
+              style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}
+              // onPress={this._onPressButton.bind(this, 'detail')}
+              onPressIn={() => this.showDetail()}
+            >
+              Accéder
+            </Button>
+          }/>
         </Card>
 
         <Card full style={{backgroundColor: '#333333'}}>
@@ -35,7 +57,14 @@ export default class MapCards extends React.Component {
               </View>
             </Card.Body>
           <Card.Footer content={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>10 rue du Pont, 75001 Paris</Text>} extra={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>Type : Copropriété</Text>}/>
-          <Card.Footer content={<Button type='primary' style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}>Accéder</Button>}/>
+          <Card.Footer content={
+            <Button
+              type='primary'
+              style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}
+            >
+              Accéder
+            </Button>
+          }/>
         </Card>
 
         <Card full style={{backgroundColor: '#333333'}}>
@@ -48,7 +77,14 @@ export default class MapCards extends React.Component {
               </View>
             </Card.Body>
           <Card.Footer content={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>10 rue du Pont, 75001 Paris</Text>} extra={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>Type : Copropriété</Text>}/>
-          <Card.Footer content={<Button type='primary' style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}>Accéder</Button>}/>
+          <Card.Footer content={
+            <Button
+              type='primary'
+              style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}
+            >
+              Accéder
+            </Button>
+          }/>
         </Card>
 
         <Card full style={{backgroundColor: '#333333'}}>
@@ -61,7 +97,14 @@ export default class MapCards extends React.Component {
               </View>
             </Card.Body>
           <Card.Footer content={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>10 rue du Pont, 75001 Paris</Text>} extra={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>Type : Copropriété</Text>}/>
-          <Card.Footer content={<Button type='primary' style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}>Accéder</Button>}/>
+          <Card.Footer content={
+            <Button
+              type='primary'
+              style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}
+            >
+              Accéder
+            </Button>
+          }/>
         </Card>
         <Card full style={{backgroundColor: '#333333'}}>
           <Card.Header title={<Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>Colixbox n°XXX</Text>} extra={<Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>XXX Caissons</Text>}/>
@@ -73,7 +116,14 @@ export default class MapCards extends React.Component {
               </View>
             </Card.Body>
           <Card.Footer content={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>10 rue du Pont, 75001 Paris</Text>} extra={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>Type : Copropriété</Text>}/>
-          <Card.Footer content={<Button type='primary' style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}>Accéder</Button>}/>
+          <Card.Footer content={
+            <Button
+              type='primary'
+              style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}
+            >
+              Accéder
+            </Button>
+          }/>
         </Card>
 
         <Card full style={{backgroundColor: '#333333'}}>
@@ -86,7 +136,14 @@ export default class MapCards extends React.Component {
               </View>
             </Card.Body>
           <Card.Footer content={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>10 rue du Pont, 75001 Paris</Text>} extra={<Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>Type : Copropriété</Text>}/>
-          <Card.Footer content={<Button type='primary' style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}>Accéder</Button>}/>
+          <Card.Footer content={
+            <Button
+              type='primary'
+              style={{backgroundColor: '#ff8c00', width: 150, borderColor:'#ff8c00', marginTop: 15, marginLeft: 120}}
+            >
+              Accéder
+            </Button>
+          }/>
         </Card>
 
 

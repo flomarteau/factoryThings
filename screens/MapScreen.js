@@ -25,14 +25,21 @@ export default class MapScreen extends React.Component {
     super();
     this.showMap = this.showMap.bind(this);
     this.state = {
-      mapView: true,
+      mapView: "hidden",
     }
     console.log(this.state);
   }
 
   showMap(visible) {
     this.setState({
-      mapView: visible,
+      mapView: "visible",
+    });
+    console.log(this.state);
+  }
+
+  hideMap(hidden) {
+    this.setState({
+      mapView: "hidden",
     });
     console.log(this.state);
   }
@@ -42,7 +49,7 @@ export default class MapScreen extends React.Component {
     var pictoList =
       <TouchableOpacity
         onPress={() => this.props.navigation.push('Map')}
-        onPress={() => this.showMap()}
+        onPress={() => this.hideMap()}
         padding={60}
       >
         <Ionicons name="ios-book" size={24} color="#ff8c00" />
@@ -51,7 +58,7 @@ export default class MapScreen extends React.Component {
     var pictoMap =
       <TouchableOpacity
         onPress={() => this.props.navigation.push('Map')}
-        onPress={() => this.showMap(!this.state.mapView)}
+        onPress={() => this.showMap()}
         padding={60}
       >
         <Ionicons name="ios-globe" size={24} color="#ff8c00" />
@@ -65,7 +72,7 @@ export default class MapScreen extends React.Component {
         <Ionicons name="ios-arrow-back" size={22} color="#ff8c00" />
       </TouchableOpacity>
 
-    if(this.state.mapView == true) {
+    if(this.state.mapView == "visible") {
       return (
         <View>
           <Header
@@ -81,7 +88,7 @@ export default class MapScreen extends React.Component {
           </View>
         </View>
       );
-    } else {
+    } else if(this.state.mapView == "hidden"){
       return (
         <View>
           <Header
