@@ -25,11 +25,14 @@ export default class AlertScreen extends React.Component {
           innerContainerStyles={{backgroundColor: 'black'}}
           outerContainerStyles={{backgroundColor: 'black', marginTop: 20, height: 50, marginBottom: 10}}
           centerComponent={{ text: 'ALERTS', style: { color: '#ff8c00', fontSize: 20 } }}
-          leftComponent={
-            <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-              <Ionicons name="ios-arrow-back" size={22} color="#ff8c00" />
-            </TouchableOpacity>
-          }
+          // leftComponent={
+          //   <TouchableOpacity
+          //     onPress={() => this.props.navigation.goBack()}
+          //     padding={50}
+          //   >
+          //     <Ionicons name="ios-arrow-back" size={22} color="#ff8c00" />
+          //   </TouchableOpacity>
+          // }
         />
 
         <ScrollView>

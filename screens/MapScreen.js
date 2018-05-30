@@ -34,6 +34,7 @@ export default class MapScreen extends React.Component {
     this.setState({
       mapView: visible,
     });
+    console.log(this.state);
   }
 
   render() {
@@ -42,20 +43,25 @@ export default class MapScreen extends React.Component {
       <TouchableOpacity
         onPress={() => this.props.navigation.push('Map')}
         onPress={() => this.showMap()}
+        padding={60}
       >
-        <Ionicons name="ios-list" size={28} color="#ff8c00" />
+        <Ionicons name="ios-book" size={24} color="#ff8c00" />
       </TouchableOpacity>
 
     var pictoMap =
       <TouchableOpacity
         onPress={() => this.props.navigation.push('Map')}
         onPress={() => this.showMap(!this.state.mapView)}
+        padding={60}
       >
-        <Ionicons name="ios-map-outline" size={28} color="#ff8c00" />
+        <Ionicons name="ios-globe" size={24} color="#ff8c00" />
       </TouchableOpacity>
 
     var backArrow =
-      <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+      <TouchableOpacity
+        onPress={() => this.props.navigation.goBack()}
+        padding={50}
+      >
         <Ionicons name="ios-arrow-back" size={22} color="#ff8c00" />
       </TouchableOpacity>
 
@@ -67,7 +73,7 @@ export default class MapScreen extends React.Component {
             outerContainerStyles={{backgroundColor: 'black', marginTop: 20, height: 50}}
             centerComponent={{ text: 'MAP', style: { color: '#ff8c00', fontSize: 20} }}
             rightComponent={ pictoList }
-            leftComponent={ backArrow }
+            // leftComponent={ backArrow }
           />
 
           <View style={{height: '100%'}}>
@@ -83,7 +89,7 @@ export default class MapScreen extends React.Component {
             outerContainerStyles={{backgroundColor: 'black', marginTop: 20, height: 50}}
             centerComponent={{ text: 'LIST', style: { color: '#ff8c00', fontSize: 20} }}
             rightComponent={ pictoMap }
-            leftComponent={ backArrow }
+            // leftComponent={ backArrow }
           />
 
           <ScrollView>
