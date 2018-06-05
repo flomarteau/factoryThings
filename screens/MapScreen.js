@@ -23,12 +23,11 @@ export default class MapScreen extends React.Component {
               innerContainerStyles={{backgroundColor: 'black'}}
               outerContainerStyles={{backgroundColor: 'black', marginTop: 20, height: 50}}
               centerComponent={{ text: 'MAP', style: { color: '#ff8c00', fontSize: 20} }}
-              rightComponent={<Switch onTintColor='#ff8c00' />}
+              //rightComponent={<Switch onTintColor='#ff8c00' />}
             />
-
       <ScrollView>
         <MapCards/>
-        <MapGoogle/>
+        {/* <MapGoogle/> */}
       </ScrollView>
     </View>
 
