@@ -285,6 +285,7 @@ export default class MapGoogle extends React.Component {
             longitudeDelta: 0.1
           }}
         >
+
         { markerList }
         <Ionicons onPress={() => this.filter()} name='ios-arrow-dropdown-circle' size={50} color="#ff8c00" style={{position: 'absolute', top: 10, right: 10}} />
 
