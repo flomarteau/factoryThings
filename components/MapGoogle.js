@@ -4,10 +4,15 @@ import {
   Text,
   View
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 export default class MapGoogle extends React.Component {
 
+  filter(){
+    console.log('coucou');
+  }
+      
   render() {
 
     var LeroyMerlin = [
@@ -269,7 +274,6 @@ export default class MapGoogle extends React.Component {
     ]
     return(
       <View style={styles.container}>
-
         <MapView
           style={styles.map}
           provider={PROVIDER_GOOGLE}
@@ -281,17 +285,9 @@ export default class MapGoogle extends React.Component {
             longitudeDelta: 0.1
           }}
         >
-
-        {/* <MapView.Marker
-          coordinate={{
-            latitude: 48.852968,
-            longitude: 2.349902
-          }}
-          title={'Colisbox n°XXX'}
-          description={'Description exemple '}
-        /> */}
-      
         { markerList }
+        <Ionicons onPress={() => this.filter()} name='ios-arrow-dropdown-circle' size={50} color="#ff8c00" style={{position: 'absolute', top: 10, right: 10}} />
+
         </MapView>
 
       </View>
@@ -301,6 +297,9 @@ export default class MapGoogle extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    // flex: 1,
+    // justifyContent: 'center',
+    // alignItems: 'center',
     position: 'absolute',
     top: 0,
     left: 0,
