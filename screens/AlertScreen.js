@@ -4,7 +4,6 @@ import {
   Text,
   ScrollView,
   TouchableOpacity,
-  ScrollView
 } from 'react-native';
 import {
   Header
